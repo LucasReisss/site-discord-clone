@@ -42,6 +42,8 @@ header {
     max-width: 23.8125rem;
 }
 
+/*Button */
+
 .buttons {
     display: flex;
     flex-direction: column;
@@ -58,6 +60,7 @@ header {
 
 .buttons > .button1 {
     background-color: #FFFFFF;
+    color: #23272A;
 }
 
 .buttons > .button2 {
@@ -93,6 +96,11 @@ section > p {
 
 .section2, .section4 {
     background-color:#F6F6F6;
+}
+
+.section4 > h1 {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 2rem;
 }
 
 /* footer */

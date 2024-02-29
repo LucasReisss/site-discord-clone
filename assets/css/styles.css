@@ -6,7 +6,8 @@
 }
 
 header {
-
+    display: flex;
+    flex-direction: column;
     background-image: url(../mobile/Header\ Background.jpg);
     background-repeat: no-repeat;
     max-width: 100%;
@@ -14,26 +15,26 @@ header {
     min-height: 505px;
     max-height: 505px;
     overflow: hidden;
-
-  
+    background-position: center center;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-  
+
     padding: 2.0rem 1.5rem;
-    
+
 }
 
-.header-content > h1 {
+.header-content>h1 {
     font-family: "Luckiest Guy", cursive;
     font-size: 2rem;
     color: #FFFFFF;
 }
 
-.header-content > p {
+.header-content>p {
 
     font-size: 1rem;
     color: #FFFFFF;
@@ -51,54 +52,105 @@ header {
     max-width: 23.8125rem;
 }
 
-.buttons > button {
+.buttons>button {
     height: 3.375rem;
     border-radius: 28px;
     border: 0px;
     font-size: 1rem;
+    padding: 1rem 1rem;
 }
 
-.buttons > .button1 {
+.buttons>.button1 {
     background-color: #FFFFFF;
     color: #23272A;
 }
 
-.buttons > .button2 {
+.buttons>.button2 {
     background-color: #23272A;
     color: #FFFFFF;
 }
 
 /*Section*/
 
+.section1>.image {
+    width: 23.3875rem;
+    height: 15.75rem;
+    background-image: url(../mobile/Section\ Image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-.section1, .section2, .section3, .section4 {
+.section2>.image {
+    background-image: url(../mobile/Section\ Image1.png);
+    background-repeat: no-repeat;
+    width: 23.3875rem;
+    height: 15.75rem;
+    background-size: contain;
+}
+
+.section3>.image {
+    background-image: url(../mobile/Section\ Image2.png);
+    background-repeat: no-repeat;
+    width: 23.3875rem;
+    height: 15.75rem;
+    background-size: contain;
+}
+
+.section4>.section-content>.image {
+    background-image: url(../mobile/Section\ Image3.png);
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 15.75rem;
+    background-size: contain;
+}
+
+.section1>.section-text,
+.section2>.section-text,
+.section3>.section-text,
+.section4>.section-content>.section-text {
     display: flex;
     flex-direction: column;
-    justify-content:  space-between;
+    gap: 1rem;
+}
 
+
+
+.section1,
+.section2,
+.section3,
+.section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2.5rem 1.5rem;
     min-height: 252px;
     gap: 1rem;
-    
+
 }
 
-section > h2 {
+section>.section-text {
+    max-width: 23.625rem;
+}
+
+section>.section-text>h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
+    line-height: normal;
 }
 
-section > p {
+section>.section-text>p {
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: normal;
 }
 
-.section2, .section4 {
-    background-color:#F6F6F6;
+.section2,
+.section4 {
+    background-color: #F6F6F6;
 }
 
-.section4 > h1 {
+.section4>.section-content>.section-text>h2 {
     font-family: "Luckiest Guy", cursive;
     font-size: 2rem;
 }
@@ -110,8 +162,141 @@ footer {
     text-align: center;
 }
 
-footer > img {
+footer>img {
     padding: 2.75rem 0rem;
 }
 
 
+@media screen and (min-width: 442px) {
+
+    header {
+        background-image: url(../desktop/Header\ Background.png);
+        background-size: cover;
+        position: relative;
+
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .header-content>h1 {
+        font-size: 3.5rem;
+    }
+
+    .header-content>p {
+        max-width: 47.3125rem;
+        padding: 0rem 16.31rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        max-width: 40rem;
+        gap: 1rem;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        display: flex;
+        flex-direction: row;
+
+        margin: 0 auto;
+        max-width: 59.687rem;
+        gap: 1rem;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .section4>.section-content {
+        gap: 1rem;
+    }
+
+    .section1>.image {
+        background-image: url(../desktop/Section\ Image.png);
+        background-size: contain;
+        width: 37.9375rem;
+        height: 24.625rem;
+    }
+
+    .section2>.image {
+        background-image: url(../desktop/Section\ Image1.png);
+        background-size: contain;
+        width: 37.9375rem;
+        height: 24.625rem;
+    }
+
+    .section3>.image {
+        display: block;
+        background-image: url(../desktop/Section\ Image2.png);
+        background-size: contain;
+        width: 37.9375rem;
+        height: 24.625rem;
+    }
+
+    .section4>.section-content>.image {
+        background-image: url(../desktop/Section\ Image3.png);
+        background-size: contain;
+        width: 100%;
+        height: 31.75rem;
+    }
+
+    .section1>.section-text,
+    .section2>.section-text,
+    .section3>.section-text {
+        max-width: 20.5625rem;
+    }
+
+    .section4>.section-content>.section-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 49rem;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .section4>.section-text>h2 {
+        text-align: center;
+        max-width: 38rem;
+    }
+
+    .section1>.section-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .section1>.section-text>h2,
+    .section2>.section-text>h2,
+    .section3>.section-text>h2,
+    .section4>.section-content>.section-text>h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .section2 {
+        max-width: 100%;
+        flex-direction: row-reverse;
+    }
+
+}
+
+@media screen and (max-width: 442px) {
+    .section4>.section-content {
+        max-width: 23.6875rem;
+        min-width: 18.6875rem;
+    
+    }
+}

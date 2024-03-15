@@ -12,8 +12,6 @@ header {
     background-repeat: no-repeat;
     max-width: 100%;
     min-width: 100px;
-    min-height: 505px;
-    max-height: 505px;
     overflow: hidden;
     background-position: center center;
 }
@@ -21,11 +19,10 @@ header {
 .header-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
-
-    padding: 2.0rem 1.5rem;
-
+    padding: 4rem 1.5rem;
+    justify-content: center;
+    height: 100%;
 }
 
 .header-content>h1 {
@@ -166,18 +163,44 @@ footer>img {
     padding: 2.75rem 0rem;
 }
 
+@media screen and  ((min-width: 442px) and (max-width: 799px)) {
+    header {
+        background-image: url(../desktop/Header\ Background.png);
 
-@media screen and (min-width: 442px) {
+        background-size: cover;
+        position: relative;
+
+    }
+    .header-content {
+        align-items: center;
+     
+    }
+
+    .header-content>h1 {
+        font-size: 2rem;
+    }
+    .section4>.section-content {
+        max-width: 3.3875rem;
+        min-width: 15rem;
+        width: 15.75rem;
+    
+    }
+}
+
+
+@media screen and (min-width: 800px) {
 
     header {
         background-image: url(../desktop/Header\ Background.png);
+
         background-size: cover;
         position: relative;
 
     }
 
     .header-content {
-        text-align: center;
+        text-align: center; 
+        align-items: center;
     }
 
     .header-content>h1 {
